@@ -20,7 +20,7 @@ This is a simple demo about how to create consumer and producer for Apache Kafka
     <li>Apache Kafka</li>
 </ul>
 
-You need Apache Kafka up an running to see this code work. Please go to <a href="https://kafka.apache.org/downloads">Apache Kafka website</a> to get a copy. <a href="https://kafka.apache.org/quickstart">Here</a> are some instructions to have it running.
+You need Apache Kafka up an running to see this code work. Please go to <a href="https://kafka.apache.org/downloads">Apache Kafka website</a> to get a copy. <a href="https://blog.unosquare.com/unosquare-platform-review-apache-kafka">Here</a> are some instructions to have it running.
 
 ### Installing
 

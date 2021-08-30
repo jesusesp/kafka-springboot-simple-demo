@@ -11,8 +11,14 @@ import java.io.IOException;
 @Slf4j
 public class Consumer {
 
-    @KafkaListener(topicPattern = UnicornTopic.UNICORN_TOPIC, groupId = "group1")
-    public void consume(String message) throws IOException {
-        log.info("Message consumed: " + message);
+    @KafkaListener(topicPattern = UnicornTopic.NEW_UNICORN, groupId = "group1")
+    public void consumeNewUnicorn(String message) throws IOException {
+        log.info("New Unicorn: " + message);
     }
+
+    @KafkaListener(topicPattern = UnicornTopic.RUN_UNICORN, groupId = "group1")
+    public void consumeRunUnicorn(String message) throws IOException {
+        log.info("Run Unicorn: " + message);
+    }
+
 }

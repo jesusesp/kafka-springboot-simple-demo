@@ -1,6 +1,6 @@
 package com.unosquare.demo.kafkaclient.controller;
 
-import com.unosquare.demo.kafkaclient.service.Producer;
+import com.unosquare.demo.kafkaclient.service.IUnicornProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UnicornController {
 
     @Autowired
-    Producer producer;
+    IUnicornProducer producer;
 
-    @PostMapping("/publish/{message}")
-    public void publish(@PathVariable String message) {
-        producer.sendMessage(message);
+    @PostMapping("/publish/new/{message}")
+    public void newUnicorn(@PathVariable String message) {
+        producer.sendNewUnicorn(message);
+    }
+
+    @PostMapping("/publish/run/{message}")
+    public void runUnicorn(@PathVariable String message) {
+        producer.sendRunUnicorn(message);
     }
 
 }
